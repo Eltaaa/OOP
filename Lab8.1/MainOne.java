@@ -7,7 +7,7 @@
  *
  * @author user
  */
-public class Main {
+public class MainOne {
 
     public static void main(String[] args) {
         Account a1 = new Account(5000, "Sommai");

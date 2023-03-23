@@ -11,34 +11,56 @@ public class Customer {
 
     private String firstName;
     private String lastName;
-    private Account[] acct;
-    private int numOfAccount;
+    private CheckingAccount acct;
 
     public Customer() {
-        this("", "");
+        this("", "", null);
     }
 
     public Customer(String firstName, String lastName) {
+        this(firstName, lastName, null);
+    }
+
+    public Customer(String firstName, String lastName, CheckingAccount acct) {
         this.firstName = firstName;
         this.lastName = lastName;
-        acct = new Account[5];
+        this.acct = acct;
     }
 
-
-    public Account getAccount(int index) {
-        return acct[index];
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void addAccount(Account acct) {
-        this.acct[this.getNumOfAccount()] = acct;
-        this.numOfAccount += 1;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public int getNumOfAccount() {
-        return this.numOfAccount;
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public CheckingAccount getAcct() {
+        return acct;
+    }
+
+    public void setAcct(CheckingAccount acct) {
+        this.acct = acct;
     }
 
     public String toString() {
-        return this.firstName + " " + this.lastName + " " + this.getNumOfAccount();
+        if (this.getAcct() == null) {
+            return this.getFirstName() + " " + this.getLastName() + " doesn't have an account.";
+        }
+        else {
+            return "The " + this.getFirstName() + " account has " + this.getAcct().getBalance() + " baht and " + this.getAcct().getCredit() + " credits.";
+        }
+    }
+
+    public boolean equals(Customer c) {
+        return this.getFirstName().equals(c.getFirstName())  && this.getLastName().equals(c.getLastName());
     }
 }
