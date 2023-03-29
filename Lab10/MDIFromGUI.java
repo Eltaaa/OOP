@@ -66,6 +66,6 @@ public class MDIFromGUI {
         fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         fr.pack();
         fr.setVisible(true);
-        fr.setSize(1000, 800);
+        pane.setSize(1000, 800);
     }
 }

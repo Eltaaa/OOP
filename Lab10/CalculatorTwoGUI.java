@@ -42,7 +42,7 @@ public class CalculatorTwoGUI {
         fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         fr.pack();
         fr.setVisible(true);
-        fr.setSize(400, 200);
+        mainPanel.setSize(400, 200);
 
     }
 
