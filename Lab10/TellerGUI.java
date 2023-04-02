@@ -31,8 +31,8 @@ public class TellerGUI {
         line2Panel = new JPanel();
         line3Panel = new JPanel();
 
-        line1Panel.setLayout(new GridLayout(1, 3));
-        line2Panel.setLayout(new GridLayout(1, 3));
+        line1Panel.setLayout(new GridLayout(1, 2));
+        line2Panel.setLayout(new GridLayout(1, 2));
         line3Panel.setLayout(new FlowLayout());
 
         balance = new JLabel("Balance");
