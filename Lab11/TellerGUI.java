@@ -93,7 +93,7 @@ public class TellerGUI implements ActionListener {
                 amotxt.setText("");
                 baltxt.setText("" + acct.getBalance());
             }
-        } else {
+        } else if (ae.getSource().equals(exit)){
             System.exit(0);
         }
     }
