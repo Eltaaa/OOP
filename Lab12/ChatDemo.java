@@ -71,6 +71,7 @@ public class ChatDemo implements ActionListener, WindowListener {
 
     @Override
     public void windowOpened(WindowEvent ae) {
+        // show data as string from file 
         try ( FileReader fr = new FileReader("ChatDemo.dat");) {
             int ch = fr.read();
             while (ch != -1) {
@@ -83,6 +84,7 @@ public class ChatDemo implements ActionListener, WindowListener {
 
     @Override
     public void windowClosing(WindowEvent ae) {
+        // store String into a file
         try (FileWriter fw = new FileWriter("ChatDemo.dat");) {
             fw.write(area.getText());
         } catch (IOException e) {
